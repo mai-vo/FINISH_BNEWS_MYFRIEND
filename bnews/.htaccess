@@ -1,0 +1,11 @@
+#mở chức năng rewrite
+RewriteEngine ON
+#định nghĩa thư mục gốc
+RewriteBase /
+#bắt đầu viết luật
+RewriteRule ^(.*)-([0-9]*)$ danhmuc.php?id=$2
+RewriteRule ^(.*)-([0-9]*).html$ chitiet.php?id_news=$2
+RewriteRule ^(.*)-([0-9]*)-page([0-9]*)$ danhmuc.php?id=$2&page=$3
+RewriteRule ^tin-tuc$ tintuc.php
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^page-([0-9]*).ok$ tintuc.php?page=$1

@@ -1,0 +1,16 @@
+#mở chức năng rewrite
+RewriteEngine ON
+#định nghĩa thư mục gốc
+RewriteBase /
+#bắt đầu viết luật
+RewriteRule ^login$ login.php
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^video$ video.php
+RewriteRule ^lien-he$ lien-he.php
+RewriteRule ^(.*)-([0-9]*)$ danh-muc.php?cid=$2
+RewriteRule ^(.*)-([0-9]*).html$ chi-tiet.php?fid=$2
+RewriteRule ^page-([0-9]*).ok$ index.php?page=$1
+RewriteRule ^(.*)-([0-9]*)-page([0-9]*)$ danh-muc.php?cid=$2&page=$3
+RewriteRule ^(.*).sea$ search_show.php?search_name=$1
+
+
